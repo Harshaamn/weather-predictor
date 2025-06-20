@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Prediction</title>
+</head>
+<body>
+  <h1>Predict Weather Features</h1>
+  <form method="POST" action="/predict">
+    <label>Select District:</label>
+    <select name="district">
+      {% for d in districts %}
+        <option value="{{ d }}">{{ d }}</option>
+      {% endfor %}
+    </select><br><br>
+
+    <label>Enter Year:</label>
+    <input type="number" name="year" required><br><br>
+
+    <button type="submit">Predict</button>
+  </form>
+</body>
+</html>
